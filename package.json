@@ -1,0 +1,20 @@
+{
+  "name": "my-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "web-ext run --source-dir=dist",
+    "build": "web-ext build --source-dir=dist",
+    "lint": "web-ext lint --source-dir=dist"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-concat": "^2.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "web-ext": "^6.4.0"
+  }
+}

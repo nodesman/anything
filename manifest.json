@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "My Web Suite",
+  "description": "This extension allows a suite of changes to websites",
+  "version": "1.0",
+  "permissions": ["activeTab", "tabs", "storage", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["*://workflowy.com/*"],
+    "js": ["sites/workflowy.com/main.js"],
+    "css": ["sites/workflowy.com/main.css"]
+  }],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
