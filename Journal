@@ -4,3 +4,5 @@ Will I want to create another one for workflowy in particular?
 Why not put it here? That seems like a bit excessive. Let's start with workflowy and then graduate into
 a whole extension later if needed.
 
+Today I learnt that all these content scripts are loaded during DOMContentLoaded implicitly. The whole body of the script
+is like the event handler for DOMContentLoaded.
