@@ -1,3 +1,5 @@
+const { execSync } = require('child_process');
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -40,7 +42,7 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: 'dist/sites/'
             },
-        },
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -48,6 +50,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'copy']);
+    grunt.registerTask('web_ext_run', 'Run web-ext', function() {
+        const done = this.async();
+        try {
+            execSync('cd dist && web-ext run --target chromium');
+            done();
+        } catch (err) {
+            grunt.log.error(err);
+            done(false);
+        }
+    });
 
+    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'copy', 'web_ext_run']);
 };

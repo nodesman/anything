@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "My Web Suite",
   "description": "This extension allows a suite of changes to websites",
   "version": "1.0",
@@ -9,6 +9,10 @@
     "persistent": false
   },
   "content_scripts": [{
+    "matches": ["*://twitter.com/*"],
+    "js": ["sites/twitter.com/main.js"],
+    "css": ["sites/twitter.com/main.css"]
+  },{
     "matches": ["*://workflowy.com/*"],
     "js": ["sites/workflowy.com/main.js"],
     "css": ["sites/workflowy.com/main.css"]
