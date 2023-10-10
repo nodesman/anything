@@ -2,7 +2,15 @@
 
     var TwitterAdditions = {
 
-        watchForQuoteTweets() {
+        headersReady: new Promise((resolve) => {
+            chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+                if (message.action === "headersReady") {
+                    resolve();
+                }
+            });
+        }),
+
+        quotesPageReady: new Promise((resolve) => {
             const debounce = (func, delay) => {
                 let debounceTimer;
                 return function() {
@@ -11,17 +19,12 @@
                 };
             };
 
-            var self= this;
-
-            // Function to execute when the URL matches "/quotes"
             const onQuotesPage = () => {
                 if (/https:\/\/twitter\.com\/[^/]+\/status\/\d+\/quotes/.test(window.location.href)) {
-                    // Your code for successful detection
-                    self.onQuoteTweets();
+                    resolve();
                 }
             };
 
-            // Initialize MutationObserver
             const observer = new MutationObserver(debounce(() => {
                 onQuotesPage();
             }, 5000));
@@ -35,13 +38,16 @@
 
             // Run initial check
             onQuotesPage();
-        },
+        }),
 
         run() {
-            //check if the URL is /quotes
             var self = this;
+            Promise.all([this.headersReady, this.quotesPageReady]).then(() => {
+                self.onQuoteTweets();
+            });
+
             window.addEventListener('load', function () {
-                self.watchForQuoteTweets();
+                // Future logic here, if needed
             });
         },
 

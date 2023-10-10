@@ -8,8 +8,12 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
             if (params.has("variables") && params.get("variables").includes("quoted_tweet_id")) {
                 const tabId = requestDetails.tabId;
 
+                // Store the headers into local storage
                 chrome.storage.local.set({[`tab_${tabId}_headers`]: requestDetails.requestHeaders}, function() {
                     console.log(`Headers stored for tab: ${tabId}`);
+
+                    // Notify the content script that headers are ready
+                    chrome.tabs.sendMessage(tabId, {action: "headersReady"});
                 });
             }
         }
