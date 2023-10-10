@@ -34,6 +34,7 @@ module.exports = function(grunt) {
                     {expand: true, src: ['manifest.json'], dest: 'dist/'},
                     {expand: true, src: ['popup.html'], dest: 'dist/'},
                     {expand: true, src: ['popup.js'], dest: 'dist/'},
+                    {expand: true, src: ['rules.json'], dest: 'dist/'},
                 ],
             },
             sites: {
@@ -61,5 +62,5 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'copy', 'web_ext_run']);
+    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'copy']);
 };

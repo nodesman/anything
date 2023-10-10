@@ -1,0 +1,1 @@
+cd dist && web-ext run --target chromium --watch-files

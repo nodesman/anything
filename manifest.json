@@ -3,26 +3,33 @@
   "name": "My Web Suite",
   "description": "This extension allows a suite of changes to websites",
   "version": "1.0",
-  "permissions": ["activeTab", "tabs", "storage", "<all_urls>"],
+  "permissions": ["activeTab", "tabs", "storage", "webRequest"],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "content_scripts": [{
-    "matches": ["*://twitter.com/*"],
-    "js": ["sites/twitter.com/main.js"],
-    "css": ["sites/twitter.com/main.css"]
-  },{
-    "matches": ["*://workflowy.com/*"],
-    "js": ["sites/workflowy.com/main.js"],
-    "css": ["sites/workflowy.com/main.css"]
-  }, {
-    "matches": ["*://chat.openai.com/*"],
-    "js": ["sites/chat.openai.com/main.js"],
-    "css": ["sites/chat.openai.com/main.css"]
-  }, {
-    "matches": ["*://onlyfans.com/*"],
-    "js": ["sites/onlyfans.com/main.js"],
-    "css": ["sites/onlyfans.com/main.css"]
-  }]
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*"],
+      "js": ["sites/twitter.com/main.js"]
+    },
+    {
+      "matches": ["*://workflowy.com/*"],
+      "js": ["sites/workflowy.com/main.js"],
+      "css": ["sites/workflowy.com/main.css"]
+    },
+    {
+      "matches": ["*://chat.openai.com/*"],
+      "js": ["sites/chat.openai.com/main.js"],
+      "css": ["sites/chat.openai.com/main.css"]
+    },
+    {
+      "matches": ["*://onlyfans.com/*"],
+      "js": ["sites/onlyfans.com/main.js"],
+      "css": ["sites/onlyfans.com/main.css"]
+    }
+  ]
 }

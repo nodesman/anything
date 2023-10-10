@@ -1,0 +1,764 @@
+{
+  "entryId": "tweet-1709091627266887974",
+  "sortIndex": "1709165072544169984",
+  "content": {
+    "entryType": "TimelineTimelineItem",
+    "__typename": "TimelineTimelineItem",
+    "itemContent": {
+      "itemType": "TimelineTweet",
+      "__typename": "TimelineTweet",
+      "tweet_results": {
+        "result": {
+          "__typename": "Tweet",
+          "rest_id": "1709091627266887974",
+          "core": {
+            "user_results": {
+              "result": {
+                "__typename": "User",
+                "id": "VXNlcjoxNjU5NTUyNTIzMDkzNDM4NDY2",
+                "rest_id": "1659552523093438466",
+                "affiliates_highlighted_label": {},
+                "has_graduated_access": true,
+                "is_blue_verified": false,
+                "profile_image_shape": "Circle",
+                "legacy": {
+                  "can_dm": false,
+                  "can_media_tag": true,
+                  "created_at": "Fri May 19 13:32:35 +0000 2023",
+                  "default_profile": true,
+                  "default_profile_image": false,
+                  "description": "I am a lover not a fighter.",
+                  "entities": {
+                    "description": {
+                      "urls": []
+                    }
+                  },
+                  "fast_followers_count": 0,
+                  "favourites_count": 3433,
+                  "followers_count": 39,
+                  "friends_count": 98,
+                  "has_custom_timelines": false,
+                  "is_translator": false,
+                  "listed_count": 1,
+                  "location": "",
+                  "media_count": 597,
+                  "name": "Smithy",
+                  "normal_followers_count": 39,
+                  "pinned_tweet_ids_str": [],
+                  "possibly_sensitive": false,
+                  "profile_banner_url": "https://pbs.twimg.com/profile_banners/1659552523093438466/1687196780",
+                  "profile_image_url_https": "https://pbs.twimg.com/profile_images/1659552778555912199/UU3b6VI3_normal.jpg",
+                  "profile_interstitial_type": "",
+                  "screen_name": "NOYFB21",
+                  "statuses_count": 1530,
+                  "translator_type": "none",
+                  "verified": false,
+                  "want_retweets": false,
+                  "withheld_in_countries": []
+                },
+                "professional": {
+                  "rest_id": "1670849700528783379",
+                  "professional_type": "Creator",
+                  "category": [
+                    {
+                      "id": 93,
+                      "name": "Aviation",
+                      "icon_name": "IconBriefcaseStroke"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1709091627266887974"
+            ],
+            "editable_until_msecs": "1696317771000",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "is_translatable": false,
+          "views": {
+            "count": "64",
+            "state": "EnabledWithCount"
+          },
+          "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+          "quoted_status_result": {
+            "result": {
+              "__typename": "Tweet",
+              "rest_id": "1709088464015426046",
+              "core": {
+                "user_results": {
+                  "result": {
+                    "__typename": "User",
+                    "id": "VXNlcjo2MzI0NzUwNjE=",
+                    "rest_id": "632475061",
+                    "affiliates_highlighted_label": {},
+                    "has_graduated_access": true,
+                    "is_blue_verified": true,
+                    "profile_image_shape": "Circle",
+                    "legacy": {
+                      "followed_by": true,
+                      "following": true,
+                      "can_dm": true,
+                      "can_media_tag": false,
+                      "created_at": "Wed Jul 11 01:30:32 +0000 2012",
+                      "default_profile": false,
+                      "default_profile_image": false,
+                      "description": "Transcending Borders in a Multipolar World",
+                      "entities": {
+                        "description": {
+                          "urls": []
+                        },
+                        "url": {
+                          "urls": [
+                            {
+                              "display_url": "ddgeopolitics.com",
+                              "expanded_url": "http://ddgeopolitics.com",
+                              "url": "https://t.co/93cN6jecbu",
+                              "indices": [
+                                0,
+                                23
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "fast_followers_count": 0,
+                      "favourites_count": 54699,
+                      "followers_count": 124552,
+                      "friends_count": 670,
+                      "has_custom_timelines": true,
+                      "is_translator": false,
+                      "listed_count": 837,
+                      "location": "",
+                      "media_count": 8177,
+                      "name": "DD Geopolitics",
+                      "normal_followers_count": 124552,
+                      "pinned_tweet_ids_str": [],
+                      "possibly_sensitive": false,
+                      "profile_banner_url": "https://pbs.twimg.com/profile_banners/632475061/1687961860",
+                      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1674058739719057415/Hratj-04_normal.jpg",
+                      "profile_interstitial_type": "",
+                      "screen_name": "DD_Geopolitics",
+                      "statuses_count": 40378,
+                      "translator_type": "none",
+                      "url": "https://t.co/93cN6jecbu",
+                      "verified": false,
+                      "want_retweets": true,
+                      "withheld_in_countries": []
+                    }
+                  }
+                }
+              },
+              "edit_control": {
+                "edit_tweet_ids": [
+                  "1709088464015426046"
+                ],
+                "editable_until_msecs": "1696317017000",
+                "is_edit_eligible": true,
+                "edits_remaining": "5"
+              },
+              "is_translatable": false,
+              "views": {
+                "count": "20533",
+                "state": "EnabledWithCount"
+              },
+              "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+              "legacy": {
+                "bookmark_count": 5,
+                "bookmarked": false,
+                "created_at": "Tue Oct 03 06:10:17 +0000 2023",
+                "conversation_id_str": "1709088464015426046",
+                "display_text_range": [
+                  0,
+                  66
+                ],
+                "entities": {
+                  "media": [
+                    {
+                      "display_url": "pic.twitter.com/HBg067aGs1",
+                      "expanded_url": "https://twitter.com/DD_Geopolitics/status/1709088464015426046/photo/1",
+                      "id_str": "1709088456440508416",
+                      "indices": [
+                        67,
+                        90
+                      ],
+                      "media_key": "3_1709088456440508416",
+                      "media_url_https": "https://pbs.twimg.com/media/F7fm5V_bcAA-ebJ.jpg",
+                      "type": "photo",
+                      "url": "https://t.co/HBg067aGs1",
+                      "ext_media_availability": {
+                        "status": "Available"
+                      },
+                      "features": {
+                        "large": {
+                          "faces": [
+                            {
+                              "x": 242,
+                              "y": 275,
+                              "h": 117,
+                              "w": 117
+                            },
+                            {
+                              "x": 1056,
+                              "y": 300,
+                              "h": 111,
+                              "w": 111
+                            }
+                          ]
+                        },
+                        "medium": {
+                          "faces": [
+                            {
+                              "x": 195,
+                              "y": 222,
+                              "h": 94,
+                              "w": 94
+                            },
+                            {
+                              "x": 852,
+                              "y": 242,
+                              "h": 89,
+                              "w": 89
+                            }
+                          ]
+                        },
+                        "small": {
+                          "faces": [
+                            {
+                              "x": 110,
+                              "y": 125,
+                              "h": 53,
+                              "w": 53
+                            },
+                            {
+                              "x": 483,
+                              "y": 137,
+                              "h": 50,
+                              "w": 50
+                            }
+                          ]
+                        },
+                        "orig": {
+                          "faces": [
+                            {
+                              "x": 242,
+                              "y": 275,
+                              "h": 117,
+                              "w": 117
+                            },
+                            {
+                              "x": 1056,
+                              "y": 300,
+                              "h": 111,
+                              "w": 111
+                            }
+                          ]
+                        }
+                      },
+                      "sizes": {
+                        "large": {
+                          "h": 1134,
+                          "w": 1486,
+                          "resize": "fit"
+                        },
+                        "medium": {
+                          "h": 916,
+                          "w": 1200,
+                          "resize": "fit"
+                        },
+                        "small": {
+                          "h": 519,
+                          "w": 680,
+                          "resize": "fit"
+                        },
+                        "thumb": {
+                          "h": 150,
+                          "w": 150,
+                          "resize": "crop"
+                        }
+                      },
+                      "original_info": {
+                        "height": 1134,
+                        "width": 1486,
+                        "focus_rects": [
+                          {
+                            "x": 0,
+                            "y": 0,
+                            "w": 1486,
+                            "h": 832
+                          },
+                          {
+                            "x": 0,
+                            "y": 0,
+                            "w": 1134,
+                            "h": 1134
+                          },
+                          {
+                            "x": 0,
+                            "y": 0,
+                            "w": 995,
+                            "h": 1134
+                          },
+                          {
+                            "x": 51,
+                            "y": 0,
+                            "w": 567,
+                            "h": 1134
+                          },
+                          {
+                            "x": 0,
+                            "y": 0,
+                            "w": 1486,
+                            "h": 1134
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "user_mentions": [],
+                  "urls": [],
+                  "hashtags": [],
+                  "symbols": []
+                },
+                "extended_entities": {
+                  "media": [
+                    {
+                      "display_url": "pic.twitter.com/HBg067aGs1",
+                      "expanded_url": "https://twitter.com/DD_Geopolitics/status/1709088464015426046/photo/1",
+                      "id_str": "1709088456440508416",
+                      "indices": [
+                        67,
+                        90
+                      ],
+                      "media_key": "3_1709088456440508416",
+                      "media_url_https": "https://pbs.twimg.com/media/F7fm5V_bcAA-ebJ.jpg",
+                      "type": "photo",
+                      "url": "https://t.co/HBg067aGs1",
+                      "ext_media_availability": {
+                        "status": "Available"
+                      },
+                      "features": {
+                        "large": {
+                          "faces": [
+                            {
+                              "x": 242,
+                              "y": 275,
+                              "h": 117,
+                              "w": 117
+                            },
+                            {
+                              "x": 1056,
+                              "y": 300,
+                              "h": 111,
+                              "w": 111
+                            }
+                          ]
+                        },
+                        "medium": {
+                          "faces": [
+                            {
+                              "x": 195,
+                              "y": 222,
+                              "h": 94,
+                              "w": 94
+                            },
+                            {
+                              "x": 852,
+                              "y": 242,
+                              "h": 89,
+                              "w": 89
+                            }
+                          ]
+                        },
+                        "small": {
+                          "faces": [
+                            {
+                              "x": 110,
+                              "y": 125,
+                              "h": 53,
+                              "w": 53
+                            },
+                            {
+                              "x": 483,
+                              "y": 137,
+                              "h": 50,
+                              "w": 50
+                            }
+                          ]
+                        },
+                        "orig": {
+                          "faces": [
+                            {
+                              "x": 242,
+                              "y": 275,
+                              "h": 117,
+                              "w": 117
+                            },
+                            {
+                              "x": 1056,
+                              "y": 300,
+                              "h": 111,
+                              "w": 111
+                            }
+                          ]
+                        }
+                      },
+                      "sizes": {
+                        "large": {
+                          "h": 1134,
+                          "w": 1486,
+                          "resize": "fit"
+                        },
+                        "medium": {
+                          "h": 916,
+                          "w": 1200,
+                          "resize": "fit"
+                        },
+                        "small": {
+                          "h": 519,
+                          "w": 680,
+                          "resize": "fit"
+                        },
+                        "thumb": {
+                          "h": 150,
+                          "w": 150,
+                          "resize": "crop"
+                        }
+                      },
+                      "original_info": {
+                        "height": 1134,
+                        "width": 1486,
+                        "focus_rects": [
+                          {
+                            "x": 0,
+                            "y": 0,
+                            "w": 1486,
+                            "h": 832
+                          },
+                          {
+                            "x": 0,
+                            "y": 0,
+                            "w": 1134,
+                            "h": 1134
+                          },
+                          {
+                            "x": 0,
+                            "y": 0,
+                            "w": 995,
+                            "h": 1134
+                          },
+                          {
+                            "x": 51,
+                            "y": 0,
+                            "w": 567,
+                            "h": 1134
+                          },
+                          {
+                            "x": 0,
+                            "y": 0,
+                            "w": 1486,
+                            "h": 1134
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "favorite_count": 584,
+                "favorited": false,
+                "full_text": "India has demanded that Canada withdraw 40 diplomats by October 10 https://t.co/HBg067aGs1",
+                "is_quote_status": false,
+                "lang": "en",
+                "possibly_sensitive": false,
+                "possibly_sensitive_editable": true,
+                "quote_count": 16,
+                "reply_count": 29,
+                "retweet_count": 156,
+                "retweeted": false,
+                "user_id_str": "632475061",
+                "id_str": "1709088464015426046"
+              }
+            }
+          },
+          "legacy": {
+            "bookmark_count": 0,
+            "bookmarked": false,
+            "created_at": "Tue Oct 03 06:22:51 +0000 2023",
+            "conversation_id_str": "1709091627266887974",
+            "display_text_range": [
+              0,
+              69
+            ],
+            "entities": {
+              "media": [
+                {
+                  "display_url": "pic.twitter.com/YIGEZBUkkY",
+                  "expanded_url": "https://twitter.com/NOYFB21/status/1709091627266887974/photo/1",
+                  "id_str": "1709091625463427072",
+                  "indices": [
+                    70,
+                    93
+                  ],
+                  "media_key": "3_1709091625463427072",
+                  "media_url_https": "https://pbs.twimg.com/media/F7fpxzhXsAAAIYE.jpg",
+                  "type": "photo",
+                  "url": "https://t.co/YIGEZBUkkY",
+                  "ext_media_availability": {
+                    "status": "Available"
+                  },
+                  "features": {
+                    "large": {
+                      "faces": [
+                        {
+                          "x": 153,
+                          "y": 104,
+                          "h": 53,
+                          "w": 53
+                        }
+                      ]
+                    },
+                    "medium": {
+                      "faces": [
+                        {
+                          "x": 153,
+                          "y": 104,
+                          "h": 53,
+                          "w": 53
+                        }
+                      ]
+                    },
+                    "small": {
+                      "faces": [
+                        {
+                          "x": 153,
+                          "y": 104,
+                          "h": 53,
+                          "w": 53
+                        }
+                      ]
+                    },
+                    "orig": {
+                      "faces": [
+                        {
+                          "x": 153,
+                          "y": 104,
+                          "h": 53,
+                          "w": 53
+                        }
+                      ]
+                    }
+                  },
+                  "sizes": {
+                    "large": {
+                      "h": 481,
+                      "w": 680,
+                      "resize": "fit"
+                    },
+                    "medium": {
+                      "h": 481,
+                      "w": 680,
+                      "resize": "fit"
+                    },
+                    "small": {
+                      "h": 481,
+                      "w": 680,
+                      "resize": "fit"
+                    },
+                    "thumb": {
+                      "h": 150,
+                      "w": 150,
+                      "resize": "crop"
+                    }
+                  },
+                  "original_info": {
+                    "height": 481,
+                    "width": 680,
+                    "focus_rects": [
+                      {
+                        "x": 0,
+                        "y": 0,
+                        "w": 680,
+                        "h": 381
+                      },
+                      {
+                        "x": 0,
+                        "y": 0,
+                        "w": 481,
+                        "h": 481
+                      },
+                      {
+                        "x": 10,
+                        "y": 0,
+                        "w": 422,
+                        "h": 481
+                      },
+                      {
+                        "x": 101,
+                        "y": 0,
+                        "w": 241,
+                        "h": 481
+                      },
+                      {
+                        "x": 0,
+                        "y": 0,
+                        "w": 680,
+                        "h": 481
+                      }
+                    ]
+                  }
+                }
+              ],
+              "user_mentions": [],
+              "urls": [],
+              "hashtags": [],
+              "symbols": []
+            },
+            "extended_entities": {
+              "media": [
+                {
+                  "display_url": "pic.twitter.com/YIGEZBUkkY",
+                  "expanded_url": "https://twitter.com/NOYFB21/status/1709091627266887974/photo/1",
+                  "id_str": "1709091625463427072",
+                  "indices": [
+                    70,
+                    93
+                  ],
+                  "media_key": "3_1709091625463427072",
+                  "media_url_https": "https://pbs.twimg.com/media/F7fpxzhXsAAAIYE.jpg",
+                  "type": "photo",
+                  "url": "https://t.co/YIGEZBUkkY",
+                  "ext_media_availability": {
+                    "status": "Available"
+                  },
+                  "features": {
+                    "large": {
+                      "faces": [
+                        {
+                          "x": 153,
+                          "y": 104,
+                          "h": 53,
+                          "w": 53
+                        }
+                      ]
+                    },
+                    "medium": {
+                      "faces": [
+                        {
+                          "x": 153,
+                          "y": 104,
+                          "h": 53,
+                          "w": 53
+                        }
+                      ]
+                    },
+                    "small": {
+                      "faces": [
+                        {
+                          "x": 153,
+                          "y": 104,
+                          "h": 53,
+                          "w": 53
+                        }
+                      ]
+                    },
+                    "orig": {
+                      "faces": [
+                        {
+                          "x": 153,
+                          "y": 104,
+                          "h": 53,
+                          "w": 53
+                        }
+                      ]
+                    }
+                  },
+                  "sizes": {
+                    "large": {
+                      "h": 481,
+                      "w": 680,
+                      "resize": "fit"
+                    },
+                    "medium": {
+                      "h": 481,
+                      "w": 680,
+                      "resize": "fit"
+                    },
+                    "small": {
+                      "h": 481,
+                      "w": 680,
+                      "resize": "fit"
+                    },
+                    "thumb": {
+                      "h": 150,
+                      "w": 150,
+                      "resize": "crop"
+                    }
+                  },
+                  "original_info": {
+                    "height": 481,
+                    "width": 680,
+                    "focus_rects": [
+                      {
+                        "x": 0,
+                        "y": 0,
+                        "w": 680,
+                        "h": 381
+                      },
+                      {
+                        "x": 0,
+                        "y": 0,
+                        "w": 481,
+                        "h": 481
+                      },
+                      {
+                        "x": 10,
+                        "y": 0,
+                        "w": 422,
+                        "h": 481
+                      },
+                      {
+                        "x": 101,
+                        "y": 0,
+                        "w": 241,
+                        "h": 481
+                      },
+                      {
+                        "x": 0,
+                        "y": 0,
+                        "w": 680,
+                        "h": 481
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "favorite_count": 1,
+            "favorited": false,
+            "full_text": "Whatever for ...... Canada is a beacon of democracy and transparency. https://t.co/YIGEZBUkkY",
+            "is_quote_status": true,
+            "lang": "en",
+            "possibly_sensitive": false,
+            "possibly_sensitive_editable": true,
+            "quote_count": 0,
+            "quoted_status_id_str": "1709088464015426046",
+            "quoted_status_permalink": {
+              "url": "https://t.co/rSgNeRWecm",
+              "expanded": "https://twitter.com/DD_Geopolitics/status/1709088464015426046",
+              "display": "twitter.com/DD_Geopolitics…"
+            },
+            "reply_count": 0,
+            "retweet_count": 0,
+            "retweeted": false,
+            "user_id_str": "1659552523093438466",
+            "id_str": "1709091627266887974"
+          }
+        }
+      },
+      "tweetDisplayType": "Tweet"
+    },
+  }
+},
