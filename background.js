@@ -1,18 +1,19 @@
-function logURL(requestDetails) {
-    const url = new URL(requestDetails.url);
+chrome.webRequest.onBeforeSendHeaders.addListener(
+    function(requestDetails) {
+        const url = new URL(requestDetails.url);
 
-    if (url.hostname === "twitter.com" && url.pathname.startsWith("/i/api/graphql")) {
-        const params = url.searchParams;
+        if (url.hostname === "twitter.com" && url.pathname.startsWith("/i/api/graphql")) {
+            const params = url.searchParams;
 
-        // Check for specific parameters in the query string
-        if (params.has("variables") && params.get("variables").includes("quoted_tweet_id")) {
-            console.log("Headers:", requestDetails.requestHeaders);
+            if (params.has("variables") && params.get("variables").includes("quoted_tweet_id")) {
+                const tabId = requestDetails.tabId;
+
+                chrome.storage.local.set({[`tab_${tabId}_headers`]: requestDetails.requestHeaders}, function() {
+                    console.log(`Headers stored for tab: ${tabId}`);
+                });
+            }
         }
-    }
-}
-
-chrome.webRequest.onBeforeSendHeaders.addListener(logURL, {
-        urls: ["<all_urls>"],
     },
-    ['requestHeaders']
+    {urls: ["<all_urls>"]},
+    ["requestHeaders"]
 );
