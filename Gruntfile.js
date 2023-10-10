@@ -43,6 +43,10 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: 'dist/sites/'
             },
+        },
+        watch: {
+            files: ['sites/**/*'],
+            tasks: ['default']
         }
     });
 
@@ -50,17 +54,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify-es');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
-
-    grunt.registerTask('web_ext_run', 'Run web-ext', function() {
-        const done = this.async();
-        try {
-            execSync('cd dist && web-ext run --target chromium');
-            done();
-        } catch (err) {
-            grunt.log.error(err);
-            done(false);
-        }
-    });
+    grunt.loadNpmTasks('grunt-contrib-watch'); // Load the watch task
 
     grunt.registerTask('default', ['clean', 'concat', 'uglify', 'copy']);
 };
