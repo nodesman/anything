@@ -17,3 +17,19 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     {urls: ["<all_urls>"]},
     ["requestHeaders"]
 );
+
+
+// Listener for message from content script
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.action === "getRequestHeaders") {
+        const tabId = sender.tab.id;
+        const key = `tab_${tabId}_headers`;
+
+        // Retrieve the headers from local storage
+        chrome.storage.local.get([key], function(result) {
+            sendResponse(result[key]);
+        });
+
+        return true;  // Keeps the message channel open for sendResponse
+    }
+});
