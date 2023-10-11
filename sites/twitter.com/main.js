@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     var TwitterAdditions = {
 
@@ -13,7 +13,7 @@
         quotesPageReady: new Promise((resolve) => {
             const debounce = (func, delay) => {
                 let debounceTimer;
-                return function() {
+                return function () {
                     clearTimeout(debounceTimer);
                     debounceTimer = setTimeout(() => func.apply(this, arguments), delay);
                 };
@@ -73,6 +73,26 @@
 
         },
 
+        getCursor: function (instructions) {
+
+            let cursor;
+            //find instructions[].type === '"TimelineAddEntries", .entries.content.entryType === "TimelineTimelineCursor"
+            let timelineCursorEntry = instructions.find(entry => entry.type === 'TimelineAddEntries' && entry.entries.find(entry => entry.content.entryType === 'TimelineTimelineCursor'));
+            if (typeof timelineCursorEntry === 'undefined') {
+                //look for instructions[].type === "TimelineReplaceEntry" with item.entry_id_to_replace is like "cursor-top-9223372036854775807" as a regex
+                let replaceEntry = instructions.find(entry => entry.type === 'TimelineReplaceEntry' && entry.entry_id_to_replace.match(/cursor-top-\d+/));
+                cursor = replaceEntry.entry.content.value;
+            } else {
+                //find the bottom cursor
+                let bottomCursor = timelineCursorEntry.entries.find(entry => entry.content.entryType === 'TimelineTimelineCursor' && entry.content.cursorType === 'Bottom');
+                if (typeof bottomCursor === 'undefined') {
+
+                } else {
+                    cursor = bottomCursor.content.value;
+                }
+            }
+            return encodeURIComponent(cursor);
+        },
         async fetchAllQuoteTweets(headers, tweetId) {
 
             //first
@@ -104,13 +124,16 @@
                 }
                 //second cursor onwards doesn't work.
                 let json = await content.json();
-                let tweetsList = json.data.search_by_raw_query.search_timeline.timeline.instructions[0].entries;
-                cursor = encodeURIComponent(tweetsList[0].content.clientEventInfo.details.timelinesDetails.controllerData);
+                let instructions1 = json.data.search_by_raw_query.search_timeline.timeline.instructions;
+
+                cursor = this.getCursor(instructions1, cursor);
+
+                let tweetsList = instructions1[0].entries;
                 isFirst = false;
-                let tweets =  tweetsList.filter(tweet => tweet.content.entryType === "TimelineTimelineItem").map(function (tweet) {
+                let tweets = tweetsList.filter(tweet => tweet.content.entryType === "TimelineTimelineItem").map(function (tweet) {
                     let result = tweet.content.itemContent.tweet_results.result;
-                    let userResults = (result.core?result.core:result.tweet.core).user_results;
-                    let tweetDetails = result.legacy?result.legacy:result.tweet.legacy
+                    let userResults = (result.core ? result.core : result.tweet.core).user_results;
+                    let tweetDetails = result.legacy ? result.legacy : result.tweet.legacy
                     return {
                         "id": tweet.entryId,
                         "name": userResults.result.legacy.screen_name,
@@ -151,8 +174,6 @@
             await this.fetchAllQuoteTweets(flattenedHeaders, tweetId);
 
 
-
-
             //get all the text of all teh quote tweets
 
 
@@ -163,8 +184,8 @@
 
         getRequestHeaders() {
             return new Promise((resolve, reject) => {
-                chrome.runtime.sendMessage({action: "getRequestHeaders"}, function(response) {
-                    if(chrome.runtime.lastError) {
+                chrome.runtime.sendMessage({action: "getRequestHeaders"}, function (response) {
+                    if (chrome.runtime.lastError) {
                         return reject(chrome.runtime.lastError);
                     }
                     resolve(response);
